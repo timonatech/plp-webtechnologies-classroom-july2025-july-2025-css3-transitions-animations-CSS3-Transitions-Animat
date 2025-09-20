@@ -1,0 +1,59 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background: #f0f0f0;
+  color: #333;
+}
+
+/* -------------------
+   PART 1: CSS ANIMATIONS
+------------------- */
+
+/* Transition on button hover */
+.animated-btn {
+  padding: 12px 20px;
+  font-size: 16px;
+  background: #4cafef;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.animated-btn:hover {
+  transform: scale(1.1);
+  background: #357abd;
+}
+
+/* Continuous pulse animation */
+.box {
+  width: 80px;
+  height: 80px;
+  margin: 15px;
+  background: #ff7675;
+  border-radius: 8px;
+}
+
+.pulse {
+  animation: pulseEffect 2s infinite;
+}
+
+@keyframes pulseEffect {
+  0% { transform: scale(1); background: #ff7675; }
+  50% { transform: scale(1.2); background: #e17055; }
+  100% { transform: scale(1); background: #ff7675; }
+}
+
+/* -------------------
+   PART 3: JS-TRIGGERED ANIMATION
+------------------- */
+
+.animate {
+  animation: slideFade 1.5s forwards;
+}
+
+@keyframes slideFade {
+  0%   { transform: translateX(-150px); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}
